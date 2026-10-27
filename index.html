@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 · Fiesta de disfraces</title>
+    <meta name="description" content="Mi cumpleaños es de disfraces. Domingo 1 de noviembre desde las 18:00 en El Manantial del Castillo. Sin disfraz no se entra.">
+    <meta name="theme-color" content="#ebe3d5">
+    <link rel="icon" href="img/arana-21.svg" type="image/svg+xml">
+    <link rel="preload" href="fonts/big-shoulders-800.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.classList.add('js')</script>
+</head>
+
+<body>
+    <!-- Dibujos: la araña-logo con el 21 calado, la telaraña y el antifaz -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <mask id="cut-21" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
+                <rect width="200" height="200" fill="#fff" />
+                <g fill="none" stroke="#000" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M76 111c0-9 6.5-15 13.5-15S103 101 103 108.5c0 8-6 13-26 34.5h28" />
+                    <path d="M113 104.5l10-8V143" />
+                </g>
+            </mask>
+            <symbol id="spider" viewBox="0 0 200 200">
+                <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M89 50 60 22 44 6" />
+                    <path d="M86 57 46 42 16 54" />
+                    <path d="M86 64 46 76 20 104" />
+                    <path d="M89 70 60 100 46 146" />
+                    <path d="M111 50 140 22 156 6" />
+                    <path d="M114 57 154 42 184 54" />
+                    <path d="M114 64 154 76 180 104" />
+                    <path d="M111 70 140 100 154 146" />
+                </g>
+                <circle cx="100" cy="60" r="17" fill="currentColor" />
+                <ellipse cx="100" cy="122" rx="39" ry="47" fill="currentColor" mask="url(#cut-21)" />
+            </symbol>
+            <symbol id="web" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+                    <path d="M120 140 400 140M120 140 400 6M120 140 260 0M120 140 120 0M120 140 0 40M120 140 0 230M120 140 40 500M120 140 210 500M120 140 400 420M120 140 400 270" />
+                    <path d="M150 140 147 127 135 116 120 113 101 119 98 132 109 166 127 170 141 162z" />
+                    <path d="M190 140 184 110 158 88 120 80 75 96 70 132 92 205 135 210 168 188z" />
+                    <path d="M240 140 230 88 190 52 120 40 42 70 34 140 70 260 145 262 202 224z" />
+                    <path d="M300 140 285 62 228 12 120 -6 6 30 -4 156 44 330 158 330 248 270z" />
+                    <path d="M370 140 350 30 270 -30 120 -60 -30 -10 -40 180 14 420 172 410 304 322z" />
+                </g>
+                <line x1="300" y1="0" x2="300" y2="300" stroke="currentColor" stroke-width="1.6" />
+                <use href="#spider" x="252" y="288" width="96" height="96" />
+            </symbol>
+            <symbol id="mask" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+                    <path d="M0 60 400 60M0 120 400 120M0 380 400 380M0 440 400 440" opacity=".35" />
+                </g>
+                <path fill="currentColor" fill-rule="evenodd"
+                    d="M40 230c10-50 60-72 112-60 22 5 34 18 48 18s26-13 48-18c52-12 102 10 112 60 8 42-14 86-62 92-40 5-64-14-80-36-8-10-12-14-18-14s-10 4-18 14c-16 22-40 41-80 36-48-6-70-50-62-92zm50 10c4-22 26-32 50-28 20 3 32 16 32 30 0 18-18 30-40 28-28-2-46-12-42-30zm220 0c-4-22-26-32-50-28-20 3-32 16-32 30 0 18 18 30 40 28 28-2 46-12 42-30z" />
+                <path d="M44 214c-20-6-34-20-30-40" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+                <path d="M356 214c20-6 34-20 30-40" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+            </symbol>
+        </defs>
+    </svg>
+
+    <header class="bar wrap">
+        <a class="mark" href="#top" aria-label="21, inicio">
+            <svg aria-hidden="true"><use href="#spider" /></svg>
+            <span>21</span>
+        </a>
+        <nav class="nav" aria-label="Secciones">
+            <a class="link" href="#programa">Programa</a>
+            <a class="link" href="#llegar">Cómo llegar</a>
+            <a class="link" href="#preguntas">Preguntas</a>
+        </nav>
+        <p class="count nums" aria-live="off"><span data-countdown>Dom 1 nov, 18:00</span></p>
+        <a class="button button--small" href="#confirmar">Confirmar</a>
+    </header>
+
+    <main>
+        <!-- 1 · Portada -->
+        <section class="hero wrap" id="top">
+            <h1 class="hero-line">
+                <span class="hero-word">Fiesta</span>
+                <span class="glyph" role="img" aria-label="21">
+                    <span class="thread" aria-hidden="true"></span>
+                    <svg aria-hidden="true"><use href="#spider" /></svg>
+                </span>
+            </h1>
+            <p class="hero-date">Dom 1 nov · 18:00</p>
+            <div class="hero-foot">
+                <p class="hero-text">Es mi cumpleaños y la fiesta es de disfraces.</p>
+                <a class="button" href="#llegar">Cómo llegar</a>
+            </div>
+        </section>
+
+        <!-- 2 · La regla (frase fija, fotos que pasan) -->
+        <section class="rule" id="regla" aria-labelledby="regla-titulo">
+            <div class="rule-stage wrap">
+                <div class="rule-copy">
+                    <h2 class="head" id="regla-titulo" data-reveal>Una sola regla</h2>
+                    <p class="statement" data-reveal style="--d:1">Todos llegan disfrazados. Sin disfraz, la puerta de la araña no se abre.</p>
+                </div>
+            </div>
+            <div class="rule-photos wrap">
+                <figure class="slot slot--portrait rule-a shutter" data-reveal>
+                    <svg class="slot-art" aria-hidden="true"><use href="#web" /></svg>
+                    <img src="img/foto-1.jpg" alt="Invitados disfrazados en la fiesta" width="800" height="1000" loading="lazy" onerror="this.remove()">
+                </figure>
+                <figure class="slot slot--wide rule-b" data-reveal>
+                    <svg class="slot-art" aria-hidden="true"><use href="#mask" /></svg>
+                    <img src="img/foto-2.jpg" alt="La pista de baile de noche" width="1600" height="1000" loading="lazy" onerror="this.remove()">
+                </figure>
+                <figure class="slot slot--square rule-c" data-reveal>
+                    <svg class="slot-art" aria-hidden="true"><use href="#web" /></svg>
+                    <img src="img/foto-3.jpg" alt="Detalle de un disfraz" width="1000" height="1000" loading="lazy" onerror="this.remove()">
+                </figure>
+            </div>
+        </section>
+
+        <!-- 3 · Programa -->
+        <section class="program wrap" id="programa" aria-labelledby="programa-titulo">
+            <h2 class="head program-title" id="programa-titulo" data-reveal>La noche, <br>hora por hora</h2>
+            <div class="program-body">
+                <figure class="slot slot--portrait program-photo" data-reveal>
+                    <svg class="slot-art" aria-hidden="true"><use href="#mask" /></svg>
+                    <img src="img/foto-4.jpg" alt="La barra iluminada con velas" width="800" height="1000" loading="lazy" onerror="this.remove()">
+                </figure>
+                <p class="program-name">Horario</p>
+                <ol class="rows">
+                    <li data-reveal><span class="row-time nums">18:00</span><span class="row-what">Abren las puertas</span><span class="row-note">Revisión de disfraces</span></li>
+                    <li data-reveal><span class="row-time nums">18:30</span><span class="row-what">Barra abierta</span><span class="row-note">Cócteles de la casa</span></li>
+                    <li data-reveal><span class="row-time nums">19:30</span><span class="row-what">Cena</span><span class="row-note">Comida para compartir</span></li>
+                    <li class="row-gap" data-reveal><span class="row-time nums">20:30</span><span class="row-what">Desfile de disfraces</span><span class="row-note">Todos pasan</span></li>
+                    <li data-reveal><span class="row-time nums">21:00</span><span class="row-what">El brindis de las 21</span><span class="row-note">Ponche negro</span></li>
+                    <li data-reveal><span class="row-time nums">21:30</span><span class="row-what">Premios</span><span class="row-note">Mejor, peor y más terrorífico</span></li>
+                    <li class="row-gap" data-reveal><span class="row-time nums">22:00</span><span class="row-what">Pista libre</span><span class="row-note">Hasta que el cuerpo aguante</span></li>
+                    <li data-reveal><span class="row-time nums">01:00</span><span class="row-what">Se apagan las luces</span><span class="row-note">Pide tu taxi con tiempo</span></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 4 · Cómo llegar -->
+        <section class="route wrap" id="llegar" aria-labelledby="llegar-titulo">
+            <div class="route-copy">
+                <h2 class="head" id="llegar-titulo" data-reveal>Cómo llegar</h2>
+                <p class="route-lead" data-reveal style="--d:1">Restaurante El Manantial del Castillo, en Ingavi, Cochabamba. Es la casa de ladrillo con el letrero verde.</p>
+                <div class="route-actions" data-reveal style="--d:2">
+                    <a class="button" data-maps="dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=-17.4023805,-66.0514166" target="_blank" rel="noopener">Llévame desde donde estoy</a>
+                    <a class="link link-plain" data-maps="open" href="https://www.google.com/maps/search/?api=1&amp;query=-17.4023805,-66.0514166" target="_blank" rel="noopener">Abrir en Google Maps</a>
+                </div>
+                <p class="route-note" data-reveal style="--d:3">Queda a las afueras: lo más fácil es llegar en auto o taxi. Comparte la ubicación con tu conductor desde el botón de arriba.</p>
+            </div>
+            <div class="route-map" data-reveal style="--d:1">
+                <svg class="map-art" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M-20 300C80 280 150 230 250 215S420 190 520 120" stroke-width="16" opacity=".14" />
+                        <path d="M-20 300C80 280 150 230 250 215S420 190 520 120" stroke-width="3" />
+                        <path d="M120 -20 170 120 250 215 300 420" stroke-width="2.4" />
+                        <path d="M-20 120 170 120 360 60 520 40" stroke-width="2.4" />
+                        <path d="M250 215 410 300 520 330M60 420 140 250M360 60 420 190" stroke-width="1.6" opacity=".6" />
+                    </g>
+                    <use href="#spider" x="226" y="146" width="48" height="48" />
+                </svg>
+                <p class="map-label">El Manantial del Castillo<br>Ingavi, Cochabamba</p>
+                <iframe title="Mapa: El Manantial del Castillo" data-maps="embed"
+                    data-src="https://www.google.com/maps?q=-17.4023805,-66.0514166&amp;z=15&amp;output=embed" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- 5 · Sin disfraz no entras (fotos sobre el titular) -->
+        <section class="door wrap" id="puerta" aria-labelledby="puerta-titulo">
+            <div class="door-prints">
+                <figure class="print print-a" tabindex="0">
+                    <div class="slot slot--print">
+                        <svg class="slot-art" aria-hidden="true"><use href="#web" /></svg>
+                        <img src="img/foto-5.jpg" alt="Disfraz de la fiesta" width="900" height="1200" loading="lazy" onerror="this.remove()">
+                    </div>
+                </figure>
+                <figure class="print print-b" tabindex="0">
+                    <div class="slot slot--print">
+                        <svg class="slot-art" aria-hidden="true"><use href="#mask" /></svg>
+                        <img src="img/foto-6.jpg" alt="Disfraz de la fiesta" width="900" height="1200" loading="lazy" onerror="this.remove()">
+                    </div>
+                </figure>
+                <figure class="print print-c" tabindex="0">
+                    <div class="slot slot--print">
+                        <svg class="slot-art" aria-hidden="true"><use href="#web" /></svg>
+                        <img src="img/foto-7.jpg" alt="Disfraz de la fiesta" width="900" height="1200" loading="lazy" onerror="this.remove()">
+                    </div>
+                </figure>
+            </div>
+            <h2 class="door-title" id="puerta-titulo">Sin disfraz <br>no entras</h2>
+            <p class="door-note">Disfraz completo, no unas orejitas de gato. Maquillaje, máscara o capa también cuentan si van con todo.</p>
+        </section>
+
+        <!-- 6 · Preguntas -->
+        <section class="faq wrap" id="preguntas" aria-labelledby="preguntas-titulo">
+            <h2 class="faq-title" id="preguntas-titulo" data-reveal>Preguntas</h2>
+            <dl class="faq-list">
+                <div class="faq-row" data-reveal>
+                    <dt>¿Qué cuenta como disfraz?</dt>
+                    <dd>Cualquier personaje, criatura u objeto que se reconozca. Tiene que ser de cuerpo entero o casi; un accesorio suelto no alcanza.</dd>
+                </div>
+                <div class="faq-row" data-reveal>
+                    <dt>¿Puedo llevar a alguien?</dt>
+                    <dd>Sí, una persona por invitado. Escríbenos su nombre al confirmar y que venga disfrazada también.</dd>
+                </div>
+                <div class="faq-row" data-reveal>
+                    <dt>¿Hasta qué hora es?</dt>
+                    <dd>Abrimos a las 18:00 y apagamos las luces a la 01:00. La puerta cierra a las 21:00, justo en el brindis; después ya no entra nadie.</dd>
+                </div>
+                <div class="faq-row" data-reveal>
+                    <dt>¿Hay comida y bebida?</dt>
+                    <dd>Hay barra abierta con cócteles de la casa, bebidas sin alcohol y algo para picar toda la noche.</dd>
+                </div>
+                <div class="faq-row" data-reveal>
+                    <dt>¿Y si llego sin disfraz?</dt>
+                    <dd>Te quedas en la puerta. Sin excepciones, ni siquiera para mí, que cumplo años.</dd>
+                </div>
+                <div class="faq-row" data-reveal>
+                    <dt>¿Hay premio al mejor disfraz?</dt>
+                    <dd>Tres: al mejor, al más terrorífico y al peor. Vota todo el mundo durante el desfile de las 20:30.</dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- 7 · Confirmar: el pase de entrada -->
+        <section class="rsvp wrap" id="confirmar" aria-labelledby="confirmar-titulo">
+            <h2 class="rsvp-title" id="confirmar-titulo"><span class="rsvp-line">¿Vienes</span> <span class="rsvp-line rsvp-line--end">disfrazado?</span></h2>
+            <div class="rsvp-band">
+                <form class="pass-form" id="pass-form" autocomplete="on" novalidate>
+                    <div class="field-wrap">
+                        <label for="pass-name">Tu nombre</label>
+                        <input class="field" id="pass-name" name="nombre" type="text" maxlength="28" placeholder="Morticia" autocomplete="name" required>
+                    </div>
+                    <div class="field-wrap">
+                        <label for="pass-costume">Vienes disfrazado de</label>
+                        <input class="field" id="pass-costume" name="disfraz" type="text" maxlength="34" placeholder="Viuda negra" required>
+                    </div>
+                    <div class="field-wrap">
+                        <label for="pass-plus">¿Vienes con alguien? Su nombre</label>
+                        <input class="field" id="pass-plus" name="acompanante" type="text" maxlength="40" placeholder="Opcional">
+                    </div>
+                </form>
+                <article class="pass" aria-label="Tu pase de entrada" aria-live="polite">
+                    <svg class="pass-spider" aria-hidden="true"><use href="#spider" /></svg>
+                    <p class="pass-name" data-pass="name">Tu nombre</p>
+                    <p class="pass-costume">Viene de <span data-pass="costume">tu disfraz</span></p>
+                    <p class="pass-when">Pase de entrada · Dom 1 nov · 18:00</p>
+                </article>
+                <div class="rsvp-actions">
+                    <button class="button button--light" type="submit" form="pass-form">Confirmar asistencia</button>
+                    <span class="rsvp-or">o</span>
+                    <a class="button button--ghost" data-confirm="whatsapp" href="https://wa.me/59163916139?text=Confirmo%20para%20la%20fiesta%2021" target="_blank" rel="noopener">Avisar por WhatsApp</a>
+                    <p class="rsvp-status" data-status role="status"></p>
+                </div>
+                <p class="rsvp-after">Al confirmar quedas en la lista de invitados. Haz una captura del pase y enséñala en la puerta.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8 · Cierre -->
+    <footer class="foot wrap">
+        <div class="foot-top">
+            <p>Fiesta de disfraces 21</p>
+            <p>Domingo 1 de noviembre, 18:00 a 01:00</p>
+            <a class="link link-plain" href="#top">Volver arriba</a>
+        </div>
+        <a class="foot-address" data-maps="open" href="https://www.google.com/maps/search/?api=1&amp;query=-17.4023805,-66.0514166" target="_blank" rel="noopener">El Manantial <br>del Castillo</a>
+        <div class="foot-meta">
+            <p><a class="link link-plain" href="#llegar">Cómo llegar</a> · <a class="link link-plain" href="#confirmar">Confirmar</a></p>
+            <p class="foot-spider"><svg aria-hidden="true"><use href="#spider" /></svg> Sin disfraz no se entra</p>
+            <p>Ingavi, Cochabamba · 2026</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

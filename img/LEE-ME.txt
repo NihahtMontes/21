@@ -1,0 +1,15 @@
+FOTOS DE LA FIESTA 21
+
+Sube aquí tus fotos con estos nombres exactos (JPG):
+
+  foto-1.jpg  vertical 4:5   (sección "Una sola regla", la primera que aparece)
+  foto-2.jpg  horizontal 16:10
+  foto-3.jpg  cuadrada 1:1
+  foto-4.jpg  vertical 4:5   (al lado del programa)
+  foto-5.jpg  vertical 3:4   (las "fotos impresas" sobre "Sin disfraz no entras")
+  foto-6.jpg  vertical 3:4
+  foto-7.jpg  vertical 3:4
+
+Mientras no exista una foto, en su lugar se ve un dibujo (telaraña o antifaz).
+Tamaño recomendado: 1600 px de lado largo, menos de 400 KB cada una (https://squoosh.app).
+Cambia el texto "alt" de cada foto en index.html para describir lo que se ve.

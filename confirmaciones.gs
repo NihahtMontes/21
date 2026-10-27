@@ -11,7 +11,11 @@
  *  4. Copia la "URL de la aplicación web" (termina en /exec) y pégala en main.js, en FIESTA.lista.
  *
  * Cada confirmación aparece como una fila nueva: fecha, nombre, disfraz y acompañante.
- * Si cambias este código, vuelve a "Implementar" > "Gestionar implementaciones" > editar > "Nueva versión".
+ * La página lee la misma hoja para mostrar la lista "Ya vienen" (solo nombre, disfraz y si viene con alguien).
+ * Para sacar a alguien de la lista, borra su fila.
+ *
+ * Si cambias este código, vuelve a "Implementar" > "Gestionar implementaciones" > el lápiz >
+ * Versión: "Nueva versión" > "Implementar". La URL no cambia; sin este paso la página no ve los cambios.
  */
 
 function doPost(e) {
@@ -24,4 +28,24 @@ function doPost(e) {
   const limpio = (v) => String(v || '').slice(0, 60).replace(/^[=+\-@]/, "'$&");
   hoja.appendRow([new Date(), limpio(p.nombre), limpio(p.disfraz), limpio(p.acompanante)]);
   return ContentService.createTextOutput('ok');
+}
+
+// La lista para la página: de la confirmación más nueva a la más vieja, sin repetir nombres.
+function doGet() {
+  const hoja = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+  const total = hoja.getLastRow() - 1;
+  const filas = total > 0 ? hoja.getRange(2, 1, total, 4).getValues() : [];
+  const texto = (v) => String(v || '').replace(/^'/, '').trim();
+  const vistos = {};
+  const invitados = [];
+  for (let i = filas.length - 1; i >= 0; i--) {
+    const nombre = texto(filas[i][1]);
+    const clave = nombre.toLowerCase();
+    if (!nombre || vistos[clave]) continue;
+    vistos[clave] = true;
+    invitados.push({ nombre: nombre, disfraz: texto(filas[i][2]), con: texto(filas[i][3]) !== '' });
+  }
+  const personas = invitados.reduce((n, g) => n + (g.con ? 2 : 1), 0);
+  return ContentService.createTextOutput(JSON.stringify({ personas: personas, invitados: invitados }))
+    .setMimeType(ContentService.MimeType.JSON);
 }

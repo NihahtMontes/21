@@ -6,7 +6,8 @@
  *  2. En el menú: Extensiones > Apps Script. Borra lo que aparece y pega este archivo entero. Guarda.
  *  3. Botón azul "Implementar" > "Nueva implementación" > tipo "Aplicación web".
  *       - Ejecutar como: Yo
- *       - Quién tiene acceso: Cualquier usuario
+ *       - Quién tiene acceso: Cualquier usuario (no "Cualquier usuario con cuenta de Google":
+ *         con esa opción Google pide iniciar sesión y las confirmaciones se pierden)
  *     Pulsa "Implementar" y autoriza con tu cuenta de Google.
  *  4. Copia la "URL de la aplicación web" (termina en /exec) y pégala en main.js, en FIESTA.lista.
  *

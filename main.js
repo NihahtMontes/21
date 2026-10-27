@@ -8,7 +8,7 @@ const FIESTA = {
   whatsapp: '59163916139',                // número con código de país, solo dígitos
   // La lista de invitados: pega aquí la URL de tu Google Apps Script (ver confirmaciones.gs).
   // Mientras esté vacía, "Confirmar asistencia" abre WhatsApp.
-  lista: 'https://script.google.com/macros/s/AKfycbwUmnVN6sLJum5Wbi_y2bydAB6KPRDDaWyNGLR0LdeXdHcaR4tB_ElRmrzVdemnfLVn/exec',
+  lista: 'https://script.google.com/macros/s/AKfycbxsA5gMZRo0LSmLFSPAca02gk-VVcQLnzercRW_EyAfMVZuTe3L7f9BCVeNCKJL5vDP/exec',
 };
 
 // Mapas: el mapa, "Abrir en Google Maps" y "Llévame desde donde estoy" apuntan al mismo lugar.
